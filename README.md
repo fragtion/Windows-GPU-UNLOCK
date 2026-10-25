@@ -2,6 +2,18 @@
 
 **English** | [한국어](README.ko.md)
 
+> **About this fork.** It tracks
+> [impacifist/Windows-GPU-UNLOCK](https://github.com/impacifist/Windows-GPU-UNLOCK) and adds a
+> hardware-verified profile for the **NVIDIA RTX 3060 12GB** (GA104 variant, `10de:2487`) on an
+> ASUS PRIME B660-PLUS D4. As far as we know, this is the first RTX 3060 (non-Ti) unlocked
+> through the Windows UEFI pre-boot route, as of October 2026. Earlier RTX 3060 unlocks used the Linux
+> kernel module from [Zagitta/gpu-unlock](https://github.com/Zagitta/gpu-unlock).
+> The fork also adds **multi-display-child support** (`GU_CONSOLE_MULTI_CHILD`), so the unlock runs
+> with every monitor left connected. Measured against a locked baseline on the same machine, tensor
+> throughput rose **about 1.9× (FP16 1.88–1.92×, BF16 1.92–1.95×, TF32 1.93–1.94× over two boots)** (FP32 unchanged). The results and limits
+> are in the [evidence page](evidence/b660plus-3060-usb/README.md). The profile has also been
+> offered upstream.
+
 Experimental UEFI GPU unlock and direct Windows handoff, expanded through
 community contributions. This source tree contains **four exact-machine
 profiles with recorded hardware results**: two internal headless configurations
@@ -163,3 +175,11 @@ and [Zagitta/gpu-unlock](https://github.com/Zagitta/gpu-unlock/tree/0ebdb1c6308b
 Preserve [LICENSE](LICENSE), [third-party notices](THIRD_PARTY_NOTICES.md) and
 [change history](CHANGES.md). NVIDIA firmware, PROM/BIOS images, drivers and CUDA
 DLLs are not redistributed in this source release.
+
+## Support
+
+If this project has been useful to you, consider buying me a coffee:
+
+**PayPal:** [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?business=2CGE77L7BZS3S&no_recurring=0)  
+**BTC:** 1Q4QkBn2Rx4hxFBgHEwRJXYHJjtfusnYfy  
+**XMR:** 4AfeGxGR4JqDxwVGWPTZHtX5QnQ3dTzwzMWLBFvysa6FTpTbz8Juqs25XuysVfowQoSYGdMESqnvrEQ969nR9Q7mEgpA5Zm
